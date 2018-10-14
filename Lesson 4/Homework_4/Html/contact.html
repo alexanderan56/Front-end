@@ -1,0 +1,99 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact us</title>
+    <style>
+        div.form {
+            margin: auto;
+            width: 30%;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="../images/Logo.png">
+                    </td>
+                    <td>
+                        <a href="news.html">News</a>
+                    </td>
+                    <td>
+                        <a href="contact.html">Contact us</a>
+                    </td>
+                    <td>
+                        <a href="gallery.html">Gallery</a>
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <br>
+    
+        <span>
+            <a href="home.html">Planets</a>
+            <a href="contact.html">>Contact us</a>
+        </span>
+    </header>
+    
+    <br>
+    <main>
+        <div style="text-align:center">
+            <h1>Contact form</h1>
+        </div>
+        
+        <br>
+
+        <div style="text-align:center">
+            <p>
+                If you have questions or if you wish to leave any feedback please feel free to contact us.
+            </p>
+        </div>
+
+        <br>
+
+        <div class="form">
+            <form method="GET" action="serverSimulation.html">
+                <label>Name:</label>
+                <input required type="text" name="contactName1" placeholder="First" />
+                <input required type="text" name="contactName2" placeholder="Last" />
+
+                <br>
+                <br>
+
+                <label>Email:</label>
+                <input required type="text" name="contactEmail" placeholder="example@domain.com" />
+                <label>Phone:</label>
+                <input requried type="text" name="contactPhone" placeholder="### ### ####" />
+
+                <br>
+                <br>
+
+                <label>Contact preference:</label>
+                <br>
+                <input required type="checkbox" name="contactCheck1" value="byEmail">
+                <label>Please reply to my email address</label>
+                <input required type="checkbox" name="contactCheck2" value="byPhone">
+                <label>Please reply by phone</label>
+
+                <br>
+                <br>
+
+                <label>Message</label>
+                <br>
+                <textarea required name="contactMessage"></textarea>
+
+                <br>
+                <br>
+
+                <input type="submit" value="Send" />
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+#house {
+}
+
+#roof {
+    width: 0; 
+    height: 0;
+
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 250px solid orangered;
+
+}
+#walls {
+    width: 350;
+    height: 300;    
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: brown;
+
+}
+
+#chimney {
+    width: 65;
+    height: 105;
+    background-color: black;
+
+    position:absolute;
+    left: 55%;
+    top: 144px;
+    z-index: -1;
+}
+
+#door {
+    width: 90;
+    height: 150;
+    background-color: darkgrey;
+
+    position: relative;
+    top: -50%;
+    left: 66%;
+
+    border-radius: 30px 30px 0 0;
+}
+
+#doorKnob {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+
+
+    position: relative;
+    top: 50%;
+    left: 66%;
+
+    border-radius: 100%;
+}
+
+#window1 {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+
+    position: relative;
+    top: 10%;
+    left: 10%;
+
+}
+#window2 {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+
+    position: relative;
+    top: -23%;
+    left: 60%;
+
+}
+#window3 {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+
+    position: relative;
+    top: -15%;
+    left: 10%;
+}
+
+
+.windowPart1 {
+    width: 47px;
+    height: 47px;
+    
+    position: relative;
+
+    border-style: solid;
+    border-color: black;
+    z-index: 5;
+    border-width: 3px;
+}
+
+.windowPart2 {
+    width: 47px;
+    height: 47px;
+    
+    z-index: 5;
+    position: relative;
+    left: 48%;
+    top: -53%;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+
+    
+}
+
+.windowPart3 {
+    width: 47px;
+    height: 47px;
+    
+    z-index: 5;
+    position: relative;
+    left: 48%;
+    top: -57%;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+
+    
+}
+.windowPart4 {
+    width: 47px;
+    height: 47px;
+    
+    z-index: 5;
+    position: relative;
+    left: 0;
+    top: -110%;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+
+    
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Buttons</title>
+
+    <style>
+
+        /* Shared style */
+
+        button {
+            position: relative;
+            margin: 20px;
+            display: inline-block;
+
+            width: 150px;
+            height: 75px;
+            background-color: grey;
+
+            color: white;
+            text-align: center;
+
+            border-radius: 10%;
+        }
+
+
+        /* Button 1 */
+
+        .wobbleButton:hover {
+            animation:wobble 0.7s ease-in-out; 
+        }
+        @keyframes wobble {
+            0% {bottom: 0px; left:0px}
+            25% {bottom: 15px; left:15px}
+            45% {bottom: 0px; left:0px}
+            75% {bottom: 10px; left:10px}
+            100% {bottom: 0px; left:0px}
+        }
+
+        /* Button 2 */
+
+        .colorChange {
+            transition:all 0.5s ease-in;
+            background-color: grey;
+
+    
+        }
+
+        .colorChange:hover {
+            background-color: blue;
+        }
+
+        /* Button 3 */
+
+        .button3Color1 {
+            position:absolute;
+            top:0;
+            left:50%;
+
+            width:0%;
+            height: 100%;
+
+            background-color: blue;
+            border-top-right-radius: 10%;
+            border-bottom-right-radius: 10%;
+
+            transition:all 0.7s ease-in;
+            
+
+
+        }
+        .colorChange2:hover .button3Color1{
+            width: 50%;
+        }
+
+        .button3Color2 {
+            position:absolute;
+            top:0;
+            right:50%;
+
+            width:0%;
+            height: 100%;
+
+            background-color: blue;
+            border-top-left-radius: 10%;
+            border-bottom-left-radius: 10%;
+
+            transition:all 0.7s ease-in;
+            
+
+
+        }
+        .colorChange2:hover .button3Color2{
+            width: 50%;
+        }
+        
+        label {
+            position:relative;
+            text-align: center;
+
+            z-index: 3;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <button class="wobbleButton">Button1</button>
+
+    <button class="colorChange">Button2</button>
+
+    <button class="colorChange2">        
+        <label>Button3</label>
+        <div class="button3Color1" ></div>
+        <div class="button3Color2" ></div>
+
+    </button>
+    
+</body>
+</html>

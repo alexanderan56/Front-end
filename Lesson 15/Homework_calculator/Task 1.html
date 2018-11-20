@@ -8,41 +8,11 @@
 
 
 <body>
-    <script>
-        var Number1 = '',
-            Number2 = '';
-        var plus=false;
-        var multiplier=false;
-        var sub=false;
-        var divide=false;
-        
-        function calcSum(number){
-            if(plus==false&&multiplier==false&&sub==false&&divide==false){
-                Number1 += number;
-            
-            }
-            else if(plus==true||multiplier==true||sub==true||divide==true){
-                Number2 += number;
-            
 
-            }
-        }
-
-        function equals() {
-           if(plus==true) {
-                document.title = (+Number1)+(+Number2);
-           }else if(multiplier==true) {
-                document.title = (+Number1)*(+Number2);
-           }else if(sub==true) {
-                document.title = (+Number1)-(+Number2);
-           }else if(divide==true) {
-                document.title = (+Number1)/(+Number2);
-           }
-        }
-    </script> 
 
     <div class="calcWrapper">
         <div>
+            <div id="calcDisplay"></div>
             <div onclick="calcSum(1);"  class="calcButton">1</div>
             <div onclick="calcSum(2);"  class="calcButton">2</div>
             <div onclick="calcSum(3);"  class="calcButton">3</div>
@@ -61,8 +31,51 @@
             <div onclick="divide=true" class="calcButton">/</div>
             <div onclick="equals()" class="calcButton">=</div>
             <div onclick="window.location.reload()" class="calcButton">Reset</div>
+            
         </div>
     </div>
-    
+
+
+    <script>
+        var Number1 = '',
+            Number2 = '';
+        var plus=false;
+        var multiplier=false;
+        var sub=false;
+        var divide=false;
+        var resultOf= 0;
+
+        function calcSum(number){
+            if(plus==false&&multiplier==false&&sub==false&&divide==false){
+                Number1 += number;
+            
+            }
+            else if(plus==true||multiplier==true||sub==true||divide==true){
+                Number2 += number;
+            
+
+            }
+        }
+
+        function equals() {
+           if(plus==true) {
+                resultOf = (+Number1)+(+Number2);
+                document.getElementById('calcDisplay').innerHTML = resultOf;
+           }else if(multiplier==true) {
+                resultOf = (+Number1)*(+Number2);
+                document.getElementById('calcDisplay').innerHTML = resultOf;
+           }else if(sub==true) {
+                resultOf = (+Number1)-(+Number2);
+                document.getElementById('calcDisplay').innerHTML = resultOf;
+           }else if(divide==true) {
+                resultOf = (+Number1)/(+Number2);
+                document.getElementById('calcDisplay').innerHTML = resultOf;
+           }
+        }
+    </script> 
+
+
+
+
 </body>
 </html>

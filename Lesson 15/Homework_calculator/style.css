@@ -1,8 +1,8 @@
 .calcWrapper{
     position: fixed;
-    height: 425px;
+    height: 500px;
     width: 210px;
-    top:calc(50% - 185px);
+    top:calc(50% - 230px);
     left: calc(50% - 105px);
 
     padding: 20px;
@@ -10,6 +10,16 @@
     font-size: 20px;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#calcDisplay {
+    background-color: #1abc9c;
+    height: 60px;
+    width: 200px;
+    margin-bottom: 10px;
+    
+    font-size: 40px;
+
 }
 
 .calcButton{

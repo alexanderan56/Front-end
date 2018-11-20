@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <script>
+        var Number1 = '',
+            Number2 = '';
+        var plus=false;
+        var multiplier=false;
+        var sub=false;
+        var divide=false;
+        
+        function calcSum(number){
+            if(plus==false&&multiplier==false&&sub==false&&divide==false){
+                Number1 += number;
+            
+            }
+            else if(plus==true||multiplier==true||sub==true||divide==true){
+                Number2 += number;
+            
+
+            }
+        }
+
+        function equals() {
+           if(plus==true) {
+                document.title = (+Number1)+(+Number2);
+           }else if(multiplier==true) {
+                document.title = (+Number1)*(+Number2);
+           }else if(sub==true) {
+                document.title = (+Number1)-(+Number2);
+           }else if(divide==true) {
+                document.title = (+Number1)/(+Number2);
+           }
+        }
+    </script> 
+
+    <div class="calcWrapper">
+        <div>
+            <div onclick="calcSum(1);"  class="calcButton">1</div>
+            <div onclick="calcSum(2);"  class="calcButton">2</div>
+            <div onclick="calcSum(3);"  class="calcButton">3</div>
+            <div onclick="calcSum(4);"  class="calcButton">4</div>
+            <div onclick="calcSum(5);"  class="calcButton">5</div>
+            <div onclick="calcSum(6);"  class="calcButton">6</div>
+            <div onclick="calcSum(7);"  class="calcButton">7</div>
+            <div onclick="calcSum(8);"  class="calcButton">8</div>
+            <div onclick="calcSum(9);"  class="calcButton">9</div>
+            <div onclick="calcSum(0);"  class="calcButton calcButtonZero">0</div>
+        </div>
+        <div class="calcSignWrapper">
+            <div onclick="plus=true" class="calcButton">+</div>
+            <div onclick="sub=true" class="calcButton">-</div>
+            <div onclick="multiplier=true" class="calcButton">*</div>
+            <div onclick="divide=true" class="calcButton">/</div>
+            <div onclick="equals()" class="calcButton">=</div>
+            <div onclick="window.location.reload()" class="calcButton">Reset</div>
+        </div>
+    </div>
+    
+</body>
+</html>

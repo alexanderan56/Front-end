@@ -25,11 +25,11 @@
             <div onclick="calcSum(0);"  class="calcButton calcButtonZero">0</div>
         </div>
         <div class="calcSignWrapper">
-            <div onclick="plus=true" class="calcButton">+</div>
-            <div onclick="sub=true" class="calcButton">-</div>
-            <div onclick="multiplier=true" class="calcButton">*</div>
-            <div onclick="divide=true" class="calcButton">/</div>
-            <div onclick="equals()" class="calcButton">=</div>
+            <div onclick="plus=true,signsFunc('+')" class="calcButton">+</div>
+            <div onclick="sub=true,signsFunc('-')" class="calcButton">-</div>
+            <div onclick="multiplier=true,signsFunc('*')" class="calcButton">*</div>
+            <div onclick="divide=true,signsFunc('/')" class="calcButton">/</div>
+            <div onclick="signsFunc('='),equals()" class="calcButton">=</div>
             <div onclick="window.location.reload()" class="calcButton">Reset</div>
             
         </div>
@@ -48,30 +48,35 @@
         function calcSum(number){
             if(plus==false&&multiplier==false&&sub==false&&divide==false){
                 Number1 += number;
+                document.getElementById('calcDisplay').innerHTML += number;
             
             }
             else if(plus==true||multiplier==true||sub==true||divide==true){
                 Number2 += number;
-            
+                document.getElementById('calcDisplay').innerHTML += number;
 
             }
+        }
+        function signsFunc(sign) {
+            document.getElementById('calcDisplay').innerHTML += sign ;
         }
 
         function equals() {
            if(plus==true) {
                 resultOf = (+Number1)+(+Number2);
-                document.getElementById('calcDisplay').innerHTML = resultOf;
+                document.getElementById('calcDisplay').innerHTML += resultOf;
            }else if(multiplier==true) {
                 resultOf = (+Number1)*(+Number2);
-                document.getElementById('calcDisplay').innerHTML = resultOf;
+                document.getElementById('calcDisplay').innerHTML += resultOf;
            }else if(sub==true) {
                 resultOf = (+Number1)-(+Number2);
-                document.getElementById('calcDisplay').innerHTML = resultOf;
+                document.getElementById('calcDisplay').innerHTML += resultOf;
            }else if(divide==true) {
                 resultOf = (+Number1)/(+Number2);
-                document.getElementById('calcDisplay').innerHTML = resultOf;
+                document.getElementById('calcDisplay').innerHTML += resultOf;
            }
         }
+
     </script> 
 
 
